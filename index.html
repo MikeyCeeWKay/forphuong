@@ -1,5 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
+    <head>
+        <link rel="stylesheet" href="public/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Làm ny t nha</h1>
+            </div>
+            <div class="gif_container">
+                <img src="../src/please.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Uki</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">Hôg</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "../src/yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                </script> 
+            </div>
+        </div>
+    <\body>
 </html>
